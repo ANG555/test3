@@ -8,3 +8,9 @@ for i in range(n):
     b = int(b)
     c = int(c)
     summ += max(a, b, c)
+n1 = max(a, b, c) - min(a, b, c)
+    sr = a+b+c-max(a, b, c) - min(a, b, c)
+    n2 = max(a, b, c) - sr
+    if n1%109!=0:
+        nekr109 = min(nekr109, n1)
+    if n2%109!=0:
