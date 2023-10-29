@@ -14,3 +14,8 @@ n1 = max(a, b, c) - min(a, b, c)
     if n1%109!=0:
         nekr109 = min(nekr109, n1)
     if n2%109!=0:
+       nekr109 = min(nekr109, n2)
+if summ%109!=0:
+    print(summ)
+else:
+    print(summ-nekr109)
