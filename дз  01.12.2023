@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    
+    int a;
+    cin >> a;
+    
+    switch (a)
+    {
+    case 0:
+        cout << "один" << endl;
+        break;
+    
+    case 1:
+        cout << "один" << endl;
+        break;
+    
+    case 2:
+        cout << "три" << endl;
+        break;
+        
+    case 3:
+        cout << "три" << endl;
+        break;
+    
+    case 4:
+        cout << "пять" << endl;
+        break;
+        
+    case 5:
+        cout << "пять" << endl;
+        break;
+        
+    case 6:
+        cout << "семь" << endl;
+        break;
+    
+    case 7:
+        cout << "семь" << endl;
+        break;
+        
+    case 8:
+        cout << "девять" << endl;
+        break;
+        
+    case 9:
+        cout << "девять" << endl;
+        break;
+    
+    default:
+        cout << "число " << a << " находится вне допустимого диапозона" << endl;
+        break;
+    }
+}
