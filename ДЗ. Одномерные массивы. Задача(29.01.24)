@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "ru");
+	int n;
+	int ctg = 0;
+	cout << "Введите размерность(от 1 до 50)" << endl;
+	cin >> n;
+	int m[50];
+	for (int i = 1; i <= n; i++)
+	{
+		m[i] = rand() % 4;
+	}
+	cout << "Исходный массив: " << endl;
+	for (int i = 1; i <= n; i++)
+	{
+		cout << m[i] << " ";
+	}
+	for (int i = 1; i <= n - ctg; i++) {
+		if (m[i] == 0) {
+			for (int j = i; j <= n - 1; j++) {
+				m[j] = m[j + 1];
+			}
+			m[n - ctg] = 0;
+			ctg++;
+		}
+	}
+	cout<< endl << "Получившийся массив: " << endl;
+	for (int i = 1; i <= n; i++)
+	{
+		cout << m[i] << " ";		
+	}
+	return 0;
+}
