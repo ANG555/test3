@@ -33,7 +33,7 @@ void postavit_ferz(int i, int j)
         if (b >= 0 && b < 8)
             doska[a][b]++;
     }
-    doska[i][j] = -1;
+    doska[i][j] = 0;
 }
 
 bool mozho_li_postavit_ferz(int i)
@@ -58,7 +58,7 @@ int main(){
     mozho_li_postavit_ferz(0);
     for (int i = 0; i < 8; i++){
         for (int j = 0; j < 8; j++){
-            if (doska[i][j] == -1)
+            if (doska[i][j] == 0)
                 cout << "[*]";
             else
                 cout << "[ ]";
@@ -66,4 +66,5 @@ int main(){
         cout << endl;
     }
 }
+
 
