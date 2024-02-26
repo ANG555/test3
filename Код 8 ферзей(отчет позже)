@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+int doska[8][8];
+
+void delit_ferz(int i, int j)
+{
+    for (int a = 0; a < 8; a++)
+    {
+        doska[a][j]--;
+        doska[i][a]--;
+        int b;
+        b = j - i + a;
+        if (b >= 0 && b < 8)
+            doska[a][b]--;
+        b = j + i - a;
+        if (b >= 0 && b < 8)
+            doska[a][b]--;
+    }
+    doska[i][j] = 0;
+}
+
+void postavit_ferz(int i, int j)
+{
+    for (int a = 0; a < 8; ++a)
+    {
+        doska[a][j]++;
+        doska[i][a]++;
+        int b;
+        b = j - i + a;
+        if (b >= 0 && b < 8)
+            doska[a][b]++;
+        b = j + i - a;
+        if (b >= 0 && b < 8)
+            doska[a][b]++;
+    }
+    doska[i][j] = -1;
+}
+
+bool mozho_li_postavit_ferz(int i)
+{
+    bool res = false;
+    for (int j = 0; j < 8; j++){
+        if (doska[i][j] == 0){
+            postavit_ferz(i, j);
+            if (i == 7)
+                res = true;
+            else{
+                if (!(res = mozho_li_postavit_ferz(i + 1)))
+                    delit_ferz(i, j);
+            }
+        }
+        if (res)
+            break;
+    }
+    return res;
+}
+int main(){
+    mozho_li_postavit_ferz(0);
+    for (int i = 0; i < 8; i++){
+        for (int j = 0; j < 8; j++){
+            if (doska[i][j] == -1)
+                cout << "[*]";
+            else
+                cout << "[ ]";
+        }
+        cout << endl;
+    }
+}
+
