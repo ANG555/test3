@@ -1,0 +1,21 @@
+﻿  Игры с памятью.cpp
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244: return: преобразование "Type2" в "Type1", возможна потеря данных
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:         with
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:         [
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:             Type2=double
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:         ]
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:         and
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:         [
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:             Type1=int
+C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11): warning C4244:         ]
+  C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(9,11):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	C:\Users\mokro\source\repos\Игры с памятью\Игры с памятью\Игры с памятью.cpp(12,10):
+  	выполняется компиляция ссылки на экземпляр шаблон функции "Type1 sum2<int,double>(Type1,Type2)"
+          with
+          [
+              Type1=int,
+              Type2=double
+          ]
+  
+  Игры с памятью.vcxproj -> C:\Users\mokro\source\repos\Игры с памятью\x64\Debug\Игры с памятью.exe
